@@ -8,4 +8,12 @@ button.addEventListener('click', function(){
     let spanName = document.createElement('span');
     let spanColor = document.createElement('span');
     
+    spanName.innerText = namee.value + ":";
+    spanColor.innerText = message.value;
+    spanName.style.color = color.value;
+
+   div.append(spanName);
+   div.append(spanColor);
+   document.body.append(div)
+
 })
