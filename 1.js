@@ -12,6 +12,16 @@ button.addEventListener('click', function(){
     spanColor.innerText = message.value;
     spanName.style.color = color.value;
 
+    fetch('https://live-chat-e070e-default-rtdb.firebaseio.com/chat.json', {
+        method : "POST",
+        document: JSON.stringify({
+            name: namee.value,
+            message: message.value,
+            color: color.value , 
+        })
+    })
+
+
    div.append(spanName);
    div.append(spanColor);
    document.body.append(div)
